@@ -28,17 +28,21 @@ Let's define what this is. It's a single character walking through some kind of 
 
 I would LIKE to also utilize data from the Sense HAT to control the environment stuff, as well as the date for seasonal "events" :eyeroll:..
 
-Each folder would take a config file and gifs to play (or maybe sprite sheets?)
+File Structure
 - \<root\>
+    - requirements.txt
     - core.config
-    - core.py
-    - Event.py - Class
-    - Action.py - Class
-    - Item.py - Class
+    - Init.py
     - adapters
-        - BaseDisplay.py - Class
+        - Display.py
         - \<DisplayAdapterName\>
             - \<Display Adapter Files\>
+    - core
+        - Event.py - Class
+        - Action.py - Class
+        - Item.py - Class
+        - BaseObject.py
+        - Images.py
     - events
         - \<eventName.gif\>
         - events.config
@@ -51,3 +55,11 @@ Each folder would take a config file and gifs to play (or maybe sprite sheets?)
         - items.config
     - scenery
         - scenery.config
+
+# TODO
+I make use of TODO in the comments to make notes for further implementation. Look for those.
+High level TODOs
+- Create a second display adapter as an example
+- Add a person running
+- Figure out how to handle more dynamic animations (like person climbing up ladder)
+    - Thought right now: Put each on its own layer or z plane and then merge the lists from the bottom up.

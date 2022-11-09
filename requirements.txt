@@ -1,0 +1,6 @@
+numpy==1.23.4
+Pillow==9.3.0
+protobuf==4.21.9
+pycairo==1.21.0
+PyGObject==3.42.2
+sense-emu==1.1
